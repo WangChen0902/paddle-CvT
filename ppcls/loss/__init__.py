@@ -5,6 +5,7 @@ import paddle.nn as nn
 from ppcls.utils import logger
 
 from .celoss import CELoss, MixCELoss
+from .celoss import CrossEntropyLoss, SoftTargetCrossEntropyLoss, LabelSmoothingCrossEntropyLoss
 from .googlenetloss import GoogLeNetLoss
 from .centerloss import CenterLoss
 from .emlloss import EmlLoss

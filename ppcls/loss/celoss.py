@@ -21,6 +21,15 @@ import paddle.nn.functional as F
 from ppcls.utils import logger
 
 
+def linear_combination(x, y, epsilon):
+        return epsilon * x + (1 - epsilon) * y
+
+
+def reduce_loss(loss, reduction='mean'):
+    return loss.mean() if reduction == 'mean' \
+            else loss.sum() if reduction == 'sum' else loss
+
+
 class CELoss(nn.Layer):
     """
     Cross entropy loss
@@ -65,3 +74,37 @@ class MixCELoss(object):
         msg = "\"MixCELos\" is deprecated, please use \"CELoss\" instead."
         logger.error(DeprecationWarning(msg))
         raise DeprecationWarning(msg)
+
+
+class CrossEntropyLoss(nn.CrossEntropyLoss):
+    def __init__(self, weight=None, ignore_index=-100, reduction='mean', soft_label=False, axis=-1, use_softmax=True, name=None):
+        super().__init__(weight, ignore_index, reduction, soft_label, axis, use_softmax, name)
+
+    def forward(self, input, label):
+        loss = super().forward(input, label)
+        return {"CrossEntropyLoss": loss}
+
+
+class LabelSmoothingCrossEntropyLoss(nn.Layer):
+    def __init__(self, epsilon=0.1, reduction='mean'):
+        super(LabelSmoothingCrossEntropyLoss, self).__init__()
+        self.epsilon = epsilon
+        self.reduction = reduction
+
+    def forward(self, preds, target):
+        n = preds.shape[-1]
+        log_preds = F.log_softmax(preds, axis=-1)
+        loss = reduce_loss(-log_preds.sum(axis=-1), self.reduction)
+        nll = F.nll_loss(log_preds, target, reduction=self.reduction)
+        loss = linear_combination(loss / n, nll, self.epsilon)
+        return {"LSCELoss": loss}
+
+
+class SoftTargetCrossEntropyLoss(nn.Layer):
+    def __init__(self):
+        super(SoftTargetCrossEntropyLoss, self).__init__()
+
+    def forward(self, x, target):
+        loss = paddle.sum(-target * F.log_softmax(x, axis=-1), axis=-1)
+        loss = loss.mean()
+        return {"STCELoss": loss}
