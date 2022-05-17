@@ -111,7 +111,17 @@ pip install -r requirements.txt
 
 ### 3.3 准备模型
 
-可以在此提示用户怎么下载预训练模型、inference模型（如果有）
+Paddle CvT_13_224 [预训练模型](https://pan.baidu.com/s/19ghRS5RI1sMmFBxfYAkKAg?pwd=6666)
+
+将下载的预训练模型解压到`output`文件夹中，目录结构如下，
+
+```shell
+output
+└── CvT_13_224
+    ├── CvT_13_224.pdopt
+    ├── CvT_13_224.pdparams
+    └── CvT_13_224.pdstates
+```
 
 
 ## 4. 开始使用
