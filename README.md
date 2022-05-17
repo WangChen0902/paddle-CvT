@@ -66,9 +66,9 @@
 
 | 模型      | top1 acc (参考精度) | top1 acc (复现精度) | top5 acc (复现精度) | 权重 \| 训练日志 |
 |:---------:|:------:|:----------:|:----------:|:----------:|
-| CvT_13_224 | 0.816 | 0.79792 | 0.94720 | [CvT_13_224]() \| [train.log]() |
+| CvT_13_224 | 0.816 | 0.79792 | 0.94720 | [CvT_13_224](https://pan.baidu.com/s/19ghRS5RI1sMmFBxfYAkKAg?pwd=6666) \| [train.log](./output/train.log) |
 
-权重及训练日志下载地址：[百度网盘](url)
+权重及训练日志下载地址：[百度网盘](https://pan.baidu.com/s/19ghRS5RI1sMmFBxfYAkKAg?pwd=6666)
 
 
 ## 3. 准备数据与环境
@@ -213,9 +213,11 @@ TIPC结果：
 如果运行成功，在终端中会显示下面的内容，具体的日志也会输出到`test_tipc/output/`文件夹中的文件中。
 
 ```bash
-Run successfully with command - python3.7 eval.py --model=CycleMLP_B1 --data_path=./dataset/ILSVRC2012/ --cls_label_path=./dataset/ILSVRC2012/val_list.txt --resume=./test_tipc/output/norm_train_gpus_0_autocast_null/CycleMLP_B1/checkpoint-latest.pd !
-Run successfully with command - python3.7 export_model.py --model=CycleMLP_B1 --resume=./test_tipc/output/norm_train_gpus_0_autocast_null/CycleMLP_B1/checkpoint-latest.pd --output=./test_tipc/output/norm_train_gpus_0_autocast_null !
-Run successfully with command - python3.7 inference.py --use_gpu=True --use_tensorrt=False --precision=fp32 --model_file=./test_tipc/output/norm_train_gpus_0_autocast_null/model.pdmodel --batch_size=2 --input_file=./dataset/ILSVRC2012/val  --params_file=./test_tipc/output/norm_train_gpus_0_autocast_null/model.pdiparams > ./test_tipc/output/python_infer_gpu_usetrt_False_precision_fp32_batchsize_2.log 2>&1 !
+[33m Run successfully with command - python3.7 tools/train.py -c ppcls/configs/ImageNet/CvT/CvT_13_224.yaml -o Global.seed=1234 -o DataLoader.Train.sampler.shuffle=False -o DataLoader.Train.loader.num_workers=0 -o DataLoader.Train.loader.use_shared_memory=False -o Global.device=gpu  -o Global.output_dir=./test_tipc/output/norm_train_gpus_0_autocast_null -o Global.epochs=2     -o DataLoader.Train.sampler.batch_size=8   !  [0m
+[33m Run successfully with command - python3.7 tools/eval.py -c ppcls/configs/ImageNet/CvT/CvT_13_224.yaml -o Global.pretrained_model=./test_tipc/output/norm_train_gpus_0_autocast_null/CvT_13_224/latest -o Global.device=gpu  !  [0m
+[33m Run successfully with command - python3.7 tools/export_model.py -c ppcls/configs/ImageNet/CvT/CvT_13_224.yaml -o Global.pretrained_model=./test_tipc/output/norm_train_gpus_0_autocast_null/CvT_13_224/latest -o Global.save_inference_dir=./test_tipc/output/norm_train_gpus_0_autocast_null!  [0m
+[33m Run successfully with command - python3.7 python/predict_cls.py -c configs/inference_cls.yaml -o Global.use_gpu=True -o Global.use_tensorrt=False -o Global.use_fp16=False -o Global.inference_model_dir=.././test_tipc/output/norm_train_gpus_0_autocast_null -o Global.batch_size=1 -o Global.infer_imgs=../dataset/ILSVRC2012/val -o Global.benchmark=True > .././test_tipc/output/infer_gpu_usetrt_False_precision_False_batchsize_1.log 2>&1 !  [0m
+[33m Run successfully with command - python3.7 python/predict_cls.py -c configs/inference_cls.yaml -o Global.use_gpu=False -o Global.enable_mkldnn=True -o Global.cpu_num_threads=1 -o Global.inference_model_dir=.././test_tipc/output/norm_train_gpus_0_autocast_null -o Global.batch_size=1 -o Global.infer_imgs=../dataset/ILSVRC2012/val -o Global.benchmark=True   > .././test_tipc/output/infer_cpu_usemkldnn_True_threads_1_batchsize_1.log 2>&1 !  [0m
 ...
 ```
 
