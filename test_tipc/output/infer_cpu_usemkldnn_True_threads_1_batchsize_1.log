@@ -1,0 +1,122 @@
+2022-05-17 17:38:58 WARNING: A new filed (benchmark) detected!
+2022-05-17 17:38:58 INFO: 
+===========================================================
+==        PaddleClas is powered by PaddlePaddle !        ==
+===========================================================
+==                                                       ==
+==   For more info please go to the following website.   ==
+==                                                       ==
+==       https://github.com/PaddlePaddle/PaddleClas      ==
+===========================================================
+
+2022-05-17 17:38:58 INFO: Global : 
+2022-05-17 17:38:58 INFO:     batch_size : 1
+2022-05-17 17:38:58 INFO:     benchmark : True
+2022-05-17 17:38:58 INFO:     cpu_num_threads : 1
+2022-05-17 17:38:58 INFO:     enable_benchmark : True
+2022-05-17 17:38:58 INFO:     enable_mkldnn : True
+2022-05-17 17:38:58 INFO:     enable_profile : False
+2022-05-17 17:38:58 INFO:     gpu_mem : 8000
+2022-05-17 17:38:58 INFO:     infer_imgs : ../dataset/ILSVRC2012/val
+2022-05-17 17:38:58 INFO:     inference_model_dir : .././test_tipc/output/norm_train_gpus_0,1_autocast_null
+2022-05-17 17:38:58 INFO:     ir_optim : True
+2022-05-17 17:38:58 INFO:     use_fp16 : False
+2022-05-17 17:38:58 INFO:     use_gpu : False
+2022-05-17 17:38:58 INFO:     use_tensorrt : False
+2022-05-17 17:38:58 INFO: PostProcess : 
+2022-05-17 17:38:58 INFO:     SavePreLabel : 
+2022-05-17 17:38:58 INFO:         save_dir : ./pre_label/
+2022-05-17 17:38:58 INFO:     Topk : 
+2022-05-17 17:38:58 INFO:         class_id_map_file : ../ppcls/utils/imagenet1k_label_list.txt
+2022-05-17 17:38:58 INFO:         topk : 5
+2022-05-17 17:38:58 INFO:     main_indicator : Topk
+2022-05-17 17:38:58 INFO: PreProcess : 
+2022-05-17 17:38:58 INFO:     transform_ops : 
+2022-05-17 17:38:58 INFO:         ResizeImage : 
+2022-05-17 17:38:58 INFO:             resize_short : 256
+2022-05-17 17:38:58 INFO:         CropImage : 
+2022-05-17 17:38:58 INFO:             size : 224
+2022-05-17 17:38:58 INFO:         NormalizeImage : 
+2022-05-17 17:38:58 INFO:             channel_num : 3
+2022-05-17 17:38:58 INFO:             mean : [0.485, 0.456, 0.406]
+2022-05-17 17:38:58 INFO:             order : 
+2022-05-17 17:38:58 INFO:             scale : 0.00392157
+2022-05-17 17:38:58 INFO:             std : [0.229, 0.224, 0.225]
+2022-05-17 17:38:58 INFO:         ToCHWImage : None
+ILSVRC2012_val_00000001.JPEG:	class id(s): [573, 256, 74, 403, 588], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'garden spider, Aranea diademata', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'hamper']
+ILSVRC2012_val_00000002.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000003.JPEG:	class id(s): [573, 256, 981, 403, 167], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'English foxhound']
+ILSVRC2012_val_00000004.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000005.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000006.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000007.JPEG:	class id(s): [573, 256, 981, 198, 167], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'standard schnauzer', 'English foxhound']
+ILSVRC2012_val_00000008.JPEG:	class id(s): [573, 256, 777, 981, 403], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'scabbard', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier']
+ILSVRC2012_val_00000009.JPEG:	class id(s): [573, 256, 167, 358, 981], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'English foxhound', 'polecat, fitch, foulmart, foumart, Mustela putorius', 'ballplayer, baseball player']
+ILSVRC2012_val_00000010.JPEG:	class id(s): [573, 256, 167, 358, 516], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'English foxhound', 'polecat, fitch, foulmart, foumart, Mustela putorius', 'cradle']
+ILSVRC2012_val_00000011.JPEG:	class id(s): [573, 256, 981, 167, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'English foxhound', 'standard schnauzer']
+ILSVRC2012_val_00000012.JPEG:	class id(s): [573, 256, 981, 403, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'standard schnauzer']
+ILSVRC2012_val_00000013.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000014.JPEG:	class id(s): [573, 256, 981, 403, 150], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'sea lion']
+ILSVRC2012_val_00000015.JPEG:	class id(s): [573, 256, 588, 358, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'hamper', 'polecat, fitch, foulmart, foumart, Mustela putorius', 'scabbard']
+ILSVRC2012_val_00000032.JPEG:	class id(s): [573, 256, 981, 198, 403], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'standard schnauzer', 'aircraft carrier, carrier, flattop, attack aircraft carrier']
+ILSVRC2012_val_00000033.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000034.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000035.JPEG:	class id(s): [573, 256, 981, 198, 403], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'standard schnauzer', 'aircraft carrier, carrier, flattop, attack aircraft carrier']
+ILSVRC2012_val_00000036.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000037.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000038.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000039.JPEG:	class id(s): [573, 256, 981, 167, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'English foxhound', 'standard schnauzer']
+ILSVRC2012_val_00000040.JPEG:	class id(s): [573, 256, 981, 198, 403], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'standard schnauzer', 'aircraft carrier, carrier, flattop, attack aircraft carrier']
+ILSVRC2012_val_00000041.JPEG:	class id(s): [573, 256, 588, 777, 403], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'hamper', 'scabbard', 'aircraft carrier, carrier, flattop, attack aircraft carrier']
+ILSVRC2012_val_00000042.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000043.JPEG:	class id(s): [573, 256, 167, 981, 32], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'English foxhound', 'ballplayer, baseball player', 'tailed frog, bell toad, ribbed toad, tailed toad, Ascaphus trui']
+ILSVRC2012_val_00000044.JPEG:	class id(s): [573, 256, 981, 403, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'standard schnauzer']
+ILSVRC2012_val_00000045.JPEG:	class id(s): [573, 256, 981, 403, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'standard schnauzer']
+ILSVRC2012_val_00000046.JPEG:	class id(s): [573, 256, 981, 403, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'standard schnauzer']
+ILSVRC2012_val_00000047.JPEG:	class id(s): [573, 256, 981, 167, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'English foxhound', 'standard schnauzer']
+ILSVRC2012_val_00000048.JPEG:	class id(s): [573, 256, 981, 167, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'English foxhound', 'scabbard']
+ILSVRC2012_val_00000049.JPEG:	class id(s): [573, 256, 981, 198, 403], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'standard schnauzer', 'aircraft carrier, carrier, flattop, attack aircraft carrier']
+ILSVRC2012_val_00000050.JPEG:	class id(s): [573, 256, 981, 198, 403], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'standard schnauzer', 'aircraft carrier, carrier, flattop, attack aircraft carrier']
+ILSVRC2012_val_00000051.JPEG:	class id(s): [573, 256, 981, 198, 32], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'standard schnauzer', 'tailed frog, bell toad, ribbed toad, tailed toad, Ascaphus trui']
+ILSVRC2012_val_00000052.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+ILSVRC2012_val_00000053.JPEG:	class id(s): [573, 256, 167, 358, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'English foxhound', 'polecat, fitch, foulmart, foumart, Mustela putorius', 'scabbard']
+ILSVRC2012_val_00000054.JPEG:	class id(s): [573, 256, 74, 588, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'garden spider, Aranea diademata', 'hamper', 'scabbard']
+ILSVRC2012_val_00000055.JPEG:	class id(s): [573, 256, 403, 981, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'ballplayer, baseball player', 'scabbard']
+ILSVRC2012_val_00000056.JPEG:	class id(s): [573, 256, 981, 403, 167], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'English foxhound']
+ILSVRC2012_val_00000057.JPEG:	class id(s): [573, 256, 981, 777, 403], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'scabbard', 'aircraft carrier, carrier, flattop, attack aircraft carrier']
+ILSVRC2012_val_00000058.JPEG:	class id(s): [573, 256, 981, 167, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'English foxhound', 'standard schnauzer']
+ILSVRC2012_val_00000059.JPEG:	class id(s): [573, 256, 981, 167, 198], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'English foxhound', 'standard schnauzer']
+ILSVRC2012_val_00000060.JPEG:	class id(s): [573, 256, 981, 403, 777], score(s): [0.01, 0.01, 0.00, 0.00, 0.00], label_name(s): ['go-kart', 'Newfoundland, Newfoundland dog', 'ballplayer, baseball player', 'aircraft carrier, carrier, flattop, attack aircraft carrier', 'scabbard']
+[2022/05/17 17:39:09] root INFO: 
+
+[2022/05/17 17:39:09] root INFO: ---------------------- Env info ----------------------
+[2022/05/17 17:39:09] root INFO:  OS_version: Ubuntu 16.04
+[2022/05/17 17:39:09] root INFO:  CUDA_version: 10.2.89
+[2022/05/17 17:39:09] root INFO:  CUDNN_version: None.None.None
+[2022/05/17 17:39:09] root INFO:  drivier_version: 440.100
+[2022/05/17 17:39:09] root INFO: ---------------------- Paddle info ----------------------
+[2022/05/17 17:39:09] root INFO:  paddle_version: 2.2.2
+[2022/05/17 17:39:09] root INFO:  paddle_commit: b031c389938bfa15e15bb20494c76f86289d77b0
+[2022/05/17 17:39:09] root INFO:  log_api_version: 1.0
+[2022/05/17 17:39:09] root INFO: ----------------------- Conf info -----------------------
+[2022/05/17 17:39:09] root INFO:  runtime_device: cpu
+[2022/05/17 17:39:09] root INFO:  ir_optim: True
+[2022/05/17 17:39:09] root INFO:  enable_memory_optim: True
+[2022/05/17 17:39:09] root INFO:  enable_tensorrt: False
+[2022/05/17 17:39:09] root INFO:  enable_mkldnn: True
+[2022/05/17 17:39:09] root INFO:  cpu_math_library_num_threads: 1
+[2022/05/17 17:39:09] root INFO: ----------------------- Model info ----------------------
+[2022/05/17 17:39:09] root INFO:  model_name: cls
+[2022/05/17 17:39:09] root INFO:  precision: fp32
+[2022/05/17 17:39:09] root INFO: ----------------------- Data info -----------------------
+[2022/05/17 17:39:09] root INFO:  batch_size: 1
+[2022/05/17 17:39:09] root INFO:  input_shape: [3, 224, 224]
+[2022/05/17 17:39:09] root INFO:  data_num: 44
+[2022/05/17 17:39:09] root INFO: ----------------------- Perf info -----------------------
+[2022/05/17 17:39:09] root INFO:  cpu_rss(MB): 791.9961, gpu_rss(MB): None, gpu_util: None%
+[2022/05/17 17:39:09] root INFO:  total time spent(s): 7.7912
+[2022/05/17 17:39:09] root INFO:  preprocess_time(ms): 2.2086, inference_time(ms): 183.1158, postprocess_time(ms): 0.1794
+/public/home/hb/.conda/envs/paddle22/lib/python3.7/site-packages/auto_log/env.py:53: DeprecationWarning: distro.linux_distribution() is deprecated. It should only be used as a compatibility shim with Python's platform.linux_distribution(). Please use distro.id(), distro.version() and distro.name() instead.
+  plat = distro.linux_distribution()[0]
+/public/home/hb/.conda/envs/paddle22/lib/python3.7/site-packages/auto_log/env.py:54: DeprecationWarning: distro.linux_distribution() is deprecated. It should only be used as a compatibility shim with Python's platform.linux_distribution(). Please use distro.id(), distro.version() and distro.name() instead.
+  ver = distro.linux_distribution()[1]
