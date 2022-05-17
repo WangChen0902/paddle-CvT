@@ -77,9 +77,9 @@ bash test_tipc/test_train_inference_python.sh configs/[model_name]/[params_file_
 
 ```shell
 # 准备数据
-bash test_tipc/prepare.sh ./test_tipc/configs/MobileNetV3/MobileNetV3_large_x1_0_train_infer_python.txt 'lite_train_lite_infer'
+bash test_tipc/prepare.sh ./test_tipc/config/CvT/CvT_13_224_train_infer_python.txt 'lite_train_lite_infer'
 # 运行测试
-bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/MobileNetV3/MobileNetV3_large_x1_0_train_infer_python.txt 'lite_train_lite_infer'
+bash test_tipc/test_train_inference_python.sh ./test_tipc/config/CvT/CvT_13_224_train_infer_python.txt 'lite_train_lite_infer'
 
 ```
 
