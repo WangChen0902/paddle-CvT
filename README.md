@@ -218,7 +218,7 @@ bash test_tipc/test_train_inference_python.sh test_tipc/config/CvT/CvT_13_224_tr
 ```
 TIPC结果：
 
-如果运行成功，在终端中会显示下面的内容，具体的日志也会输出到`test_tipc/output/`文件夹中的文件中。
+如果运行成功，在终端中会显示下面的内容，具体的日志也会输出到[test_tipc/output](test_tipc/output/)文件夹中的文件中。
 
 ```bash
 [33m Run successfully with command - python3.7 tools/train.py -c ppcls/configs/ImageNet/CvT/CvT_13_224.yaml -o Global.seed=1234 -o DataLoader.Train.sampler.shuffle=False -o DataLoader.Train.loader.num_workers=0 -o DataLoader.Train.loader.use_shared_memory=False -o Global.device=gpu  -o Global.output_dir=./test_tipc/output/norm_train_gpus_0_autocast_null -o Global.epochs=2     -o DataLoader.Train.sampler.batch_size=8   !  [0m
