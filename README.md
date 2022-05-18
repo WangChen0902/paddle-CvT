@@ -202,7 +202,7 @@ python3.7 tools/export_model.py \
 TIPC: [TIPC: test_tipc/README.md](./test_tipc/README.md)
 
 首先安装auto_log，需要进行安装，安装方式如下：
-auto_log的详细介绍参考https://github.com/LDOUBLEV/AutoLog。
+auto_log的详细介绍参考https://github.com/LDOUBLEV/AutoLog
 ```shell
 git clone https://github.com/LDOUBLEV/AutoLog
 cd AutoLog/
